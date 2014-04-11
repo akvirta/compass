@@ -39,6 +39,7 @@
 	document.addEventListener("deviceready", onDeviceReady, false); //creates a listener that waits for the deviceready event and then fires onDevice ready function
 
 	function onDeviceReady() { 
+		alert("onDeviceReady");
 		startCompass(); //runs the startCompass function
 	}
 
@@ -54,6 +55,7 @@
 	function onSuccess(heading) {//device s magnetic heading is passed to heading variable
 
 		$("#needle").rotate(-heading.magneticHeading); //jquery function that gets the #needle id and rotates it minus the current heading
+		alert("onSuccess");
 	}
 
 	function onError(compassError) { //if there is an error the error will be passed to onError in the compassError variable
